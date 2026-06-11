@@ -1,61 +1,62 @@
-# OS
+# =========================
+# OS Files
+# =========================
 .DS_Store
 Thumbs.db
 
+# =========================
 # IDE
+# =========================
 .vscode/
 .idea/
 *.swp
-*.swo
 
-# Terraform
-.terraform/
-*.tfstate
-*.tfstate.*
-terraform.tfvars
-*.tfvars
-.terraform.lock.hcl
+# =========================
+# Kubernetes Generated
+# =========================
+*-rendered.yaml
 
-# Kubernetes
-kubeconfig
-*.kubeconfig
-
+# =========================
 # Helm
-*/charts/*.tgz
-charts/*.tgz
+# =========================
+**/charts/
+**/*.tgz
 
+# =========================
 # Secrets
+# =========================
 *.pem
 *.key
 *.crt
 *.p12
 *.jks
 
+secrets.yaml
+secret.yaml
+
+# =========================
+# Terraform
+# =========================
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+*.tfvars
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
 # Environment Files
+# =========================
 .env
 .env.*
 
-# Logs
-*.log
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-
-# Node
-node_modules/
-
-# Java
-target/
-*.class
-
-# Mac/Linux
-*.pid
-
-# ArgoCD secrets
-argocd-secret.yaml
-
-# Temporary files
+# =========================
+# Temporary
+# =========================
 tmp/
 temp/
+*-rendered.yaml
