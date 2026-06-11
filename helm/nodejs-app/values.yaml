@@ -1,21 +1,16 @@
 namespace: nodejs
-
 backend:
   image: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/nodejs-backend
   tag: 03e5f49
-
 frontend:
   image: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/nodejs-frontend
   tag: 03e5f49
-
 postgres:
   image: postgres:16-alpine
-
 database:
   name: taskflow
   user: taskflow_user
   password: taskflow_pass
-
 storage:
   size: 5Gi
   storageClass: gp2
