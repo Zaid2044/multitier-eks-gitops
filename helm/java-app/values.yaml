@@ -2,11 +2,11 @@ namespace: java
 backend:
   image:
     repository: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/java-backend
-    tag: a62437a
+    tag: f8b2366
 frontend:
   image:
     repository: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/java-frontend
-    tag: a62437a
+    tag: f8b2366
 postgres:
   image: postgres:17.5-alpine
 database:
