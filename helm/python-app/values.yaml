@@ -12,7 +12,7 @@ postgres:
 backend:
   image:
     repository: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/python-backend
-        tag: b7786fa
+    tag: b7786fa
 
   replicas: 1
   port: 5000
@@ -20,7 +20,7 @@ backend:
 frontend:
   image:
     repository: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/python-frontend
-        tag: b7786fa
+    tag: b7786fa
 
   replicas: 1
   port: 80
