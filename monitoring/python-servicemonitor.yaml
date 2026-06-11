@@ -1,0 +1,20 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+
+metadata:
+  name: python-backend
+  namespace: monitoring
+
+spec:
+  namespaceSelector:
+    matchNames:
+      - python
+
+  selector:
+    matchLabels:
+      app: backend
+
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 30s
