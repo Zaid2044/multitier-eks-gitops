@@ -1,0 +1,46 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+*.tfvars
+.terraform.lock.hcl
+
+# Helm
+charts/
+tmpcharts/
+
+# Kubernetes
+*.kubeconfig
+
+# Logs
+*.log
+
+# Mac/Linux
+*.pid
+
+# ArgoCD
+argocd-secret.yaml
+
+# Secrets
+*.pem
+*.key
+*.crt
+*.p12
+
+# Env Files
+.env
+.env.*
+
+# Misc
+coverage/
+node_modules/
