@@ -1,21 +1,16 @@
 namespace: java
-
 backend:
   image: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/java-backend
   tag: a62437a
-
 frontend:
   image: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/java-frontend
   tag: a62437a
-
 postgres:
   image: postgres:17.5-alpine
-
 database:
   name: employee_portal
   user: employee_app
   password: employee_secret
-
 storage:
   size: 5Gi
   storageClass: gp2
