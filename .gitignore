@@ -6,6 +6,7 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+*.swo
 
 # Terraform
 .terraform/
@@ -15,32 +16,46 @@ terraform.tfvars
 *.tfvars
 .terraform.lock.hcl
 
-# Helm
-charts/
-tmpcharts/
-
 # Kubernetes
+kubeconfig
 *.kubeconfig
 
-# Logs
-*.log
-
-# Mac/Linux
-*.pid
-
-# ArgoCD
-argocd-secret.yaml
+# Helm
+*/charts/*.tgz
+charts/*.tgz
 
 # Secrets
 *.pem
 *.key
 *.crt
 *.p12
+*.jks
 
-# Env Files
+# Environment Files
 .env
 .env.*
 
-# Misc
-coverage/
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node
 node_modules/
+
+# Java
+target/
+*.class
+
+# Mac/Linux
+*.pid
+
+# ArgoCD secrets
+argocd-secret.yaml
+
+# Temporary files
+tmp/
+temp/
