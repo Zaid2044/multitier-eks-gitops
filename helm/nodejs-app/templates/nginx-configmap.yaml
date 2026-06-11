@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: nginx-config
+
+data:
+  nginx.conf: |
+    upstream backend {
+        server backend:3000;
+    }
+
+    upstream frontend {
+        server frontend:8080;
+    }
+
+    server {
+        listen 80;
+
+        location /api/ {
+            proxy_pass http://backend;
+        }
+
+        location ~ ^/(metrics|health)$ {
+            proxy_pass http://backend;
+        }
+
+        location / {
+            proxy_pass http://frontend;
+        }
+    }

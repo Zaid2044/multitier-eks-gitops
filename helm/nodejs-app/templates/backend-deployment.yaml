@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: backend
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: backend
+
+  template:
+    metadata:
+      labels:
+        app: backend
+
+    spec:
+      containers:
+      - name: backend
+
+        image: "{{ .Values.backend.image }}:{{ .Values.backend.tag }}"
+
+        ports:
+        - containerPort: 3000
+
+        env:
+        - name: NODE_ENV
+          value: production
+
+        - name: PORT
+          value: "3000"
+
+        - name: DB_HOST
+          value: postgres
+
+        - name: DB_PORT
+          value: "5432"
+
+        - name: DB_NAME
+          value: taskflow
+
+        - name: DB_USER
+          value: taskflow_user
+
+        - name: DB_PASSWORD
+          value: taskflow_pass
+
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
