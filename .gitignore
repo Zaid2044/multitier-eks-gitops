@@ -60,3 +60,4 @@ terraform.tfvars
 tmp/
 temp/
 *-rendered.yaml
+.json
