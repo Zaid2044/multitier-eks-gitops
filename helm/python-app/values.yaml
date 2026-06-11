@@ -1,29 +1,21 @@
 namespace: python
-
 postgres:
   image: postgres:16-alpine
-
   database: inventory_db
   username: inventory_user
   password: inventory_pass
-
   storage: 5Gi
-
 backend:
   image:
     repository: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/python-backend
-    tag: b7786fa
-
+    tag: af7e7dc
   replicas: 1
   port: 5000
-
 frontend:
   image:
     repository: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/python-frontend
-    tag: b7786fa
-
+    tag: af7e7dc
   replicas: 1
   port: 80
-
 ingress:
   host: python.local
