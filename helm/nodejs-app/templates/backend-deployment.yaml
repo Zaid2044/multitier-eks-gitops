@@ -20,7 +20,7 @@ spec:
       containers:
       - name: backend
 
-        image: "{{ .Values.backend.image }}:{{ .Values.backend.tag }}"
+        image: "{{ .Values.backend.image.repository }}:{{ .Values.backend.image.tag }}"
 
         ports:
         - containerPort: 3000
