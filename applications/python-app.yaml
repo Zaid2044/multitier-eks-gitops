@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/<YOUR_GITHUB_USERNAME>/multitier-eks-gitops.git
+    repoURL: https://github.com/Zaid2044/multitier-eks-gitops.git
     targetRevision: main
     path: helm/python-app
 
