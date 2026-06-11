@@ -4,6 +4,8 @@ kind: ServiceMonitor
 metadata:
   name: nodejs-backend
   namespace: monitoring
+  labels:
+    release: monitoring
 
 spec:
   namespaceSelector:
@@ -17,4 +19,4 @@ spec:
   endpoints:
     - port: http
       path: /metrics
-      interval: 30s
+      interval: 30s 
