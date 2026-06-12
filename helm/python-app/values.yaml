@@ -8,13 +8,13 @@ postgres:
 backend:
   image:
     repository: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/python-backend
-    tag: af7e7dc
+    tag: 9bc6b90
   replicas: 1
   port: 5000
 frontend:
   image:
     repository: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/python-frontend
-    tag: af7e7dc
+    tag: 9bc6b90
   replicas: 1
   port: 80
 ingress:
