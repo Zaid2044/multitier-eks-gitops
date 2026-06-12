@@ -2,11 +2,11 @@ namespace: nodejs
 backend:
   image:
     repository: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/nodejs-backend
-    tag: 594e979
+    tag: e0ef2dc
 frontend:
   image:
     repository: 234273295663.dkr.ecr.ap-south-1.amazonaws.com/nodejs-frontend
-    tag: 594e979
+    tag: e0ef2dc
 postgres:
   image: postgres:16-alpine
 database:
